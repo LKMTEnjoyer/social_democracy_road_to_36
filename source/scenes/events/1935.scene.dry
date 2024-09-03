@@ -1,12 +1,12 @@
-title: 1933
+title: 1935
 subtitle: A new year
 tags: event
 priority: -3
-view-if: (year = 1933 and month >= 12) or year >= 1934
+view-if: (year = 1935 and month >= 12) or year >= 1936
 max-visits: 1
 on-arrival: 
 
-It is the end of 1933, and the NSDAP still has not taken power. It appears that we have already passed the worst of the years of crisis. We are turning the corner on the Great Depression, and Nazism's days are numbered.
+It is the end of 1935, and the NSDAP has fallen into a minor party, no longer able to threaten our democracy. It appears that the worst effects of the Depression are already behind us. We have recovered from the Great Depression, and Nazism's days are numbered.
 
 Perhaps Germany will finally enter into a new era of genuine peace...
 
