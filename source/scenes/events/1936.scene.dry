@@ -32,6 +32,6 @@ if (!Q.economic_plan) {
 
 It is the end of 1936, and the NSDAP has failed in its schemes of taking over Germany. It appears that we have already passed the worst of the years of crisis. We have passed the Great Depression, and Nazism has fallen, at least in our county.
 
-Perhaps Germany will finally enter into a new era of genuine peace...
+Perhaps Germany will finally enter into a new era of genuine peace... [? if works_program = 0 : And perhaps the rest of Europe will follow with it. ?]
 
 - @game_over: Game over.
