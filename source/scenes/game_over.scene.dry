@@ -391,6 +391,8 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
 
+[? if achievement_a_las_barricadas: **Auf die Barrikaden** - Win the civil war without appealing to the Reichswehr, using the Prussian police, or asking for aid from the Soviet Union. ?]
+
 [? if achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
 [? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
@@ -471,6 +473,8 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 [? if not achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
 
 [? if not achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+
+[? if not game_achievement_a_las_barricadas: **Auf die Barrikaden** - Win the civil war without appealing to the Reichswehr, using the Prussian police, or asking for aid from the Soviet Union. ?]
 
 [? if not achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
