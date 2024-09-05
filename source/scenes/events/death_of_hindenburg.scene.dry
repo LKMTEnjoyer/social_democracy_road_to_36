@@ -3,6 +3,6 @@ view-if: year = 1934 and month >= 7
 frequency: 1000
 max-visits: 1
 tags: event
-on-arrival: hindenburg_dead = 1
+on-arrival: hindenburg_dead = 1; president = "Interim Presidency"
 
 Paul von Hindenburg, reknowned war hero, has died. He was a controversial figure, both seen as a symbol of national pride and as a military reactionary. An interim presidency has been appointed for now; new presidential elections will be held in three months.
