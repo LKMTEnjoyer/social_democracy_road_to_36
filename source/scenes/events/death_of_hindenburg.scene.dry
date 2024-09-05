@@ -1,8 +1,8 @@
-title: The Death of Gustav Stresemann
-view-if: year = 1929 and month >= 9
+title: The Death of Paul von Hindenburg
+view-if: year = 1934 and month >= 7
 frequency: 1000
 max-visits: 1
 tags: event
-on-arrival: stresemann_dead = 1; dvp_relation -= 5
+on-arrival: hindenburg_dead = 1
 
-Gustav Stresemann, leader of the DVP, has died. He was the primary force driving the party to support democracy; without him, the democratic forces in the Republic will be so much weaker.
+Paul von Hindenburg, reknowned war hero, has died. He was a controversial figure, both seen as a symbol of national pride and as a military reactionary. An interim presidency has been appointed for now; new presidential elections will be held in three months.
