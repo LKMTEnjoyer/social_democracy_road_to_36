@@ -1,6 +1,6 @@
 title: Presidential Election
-subtitle: Hindenburg runs for re-election...
-view-if: year = 1932 and month > 10
+subtitle: New elections are held after Hindenburg's death. 
+view-if: year = 1934 and month > 10
 frequency: 1000
 max-visits: 1
 new-page: true
