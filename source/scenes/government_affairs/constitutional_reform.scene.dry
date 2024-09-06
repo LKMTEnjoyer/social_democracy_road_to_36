@@ -23,7 +23,7 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 @reforms_menu
 
 - @vote_threshold: Change the vote threshold to 5% for parties to be represented in the Reichstag.
-- @constructive_vonc: Ban non-constructive votes of no confidence.
+#- @constructive_vonc: Ban non-constructive votes of no confidence.
 - @as_is: Do not pursue constitutional reform.
 - @easy_discard
 #- @constitutional_bans: Allow the banning of anti-constitutional parties.
@@ -33,11 +33,11 @@ on-arrival: {!
 
 !}
 
-@constructive_vonc
+#@constructive_vonc
 
 # Zentrum and DDP will always support this, all other parties oppose.
 
-@constitutional_bans
+#@constitutional_bans
 
 # Temporarily disable this for now - how would this interact with the already-extant law for the protection of the republic? This 
 
