@@ -198,9 +198,6 @@
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
-  window.onload = function() {
-    window.dendryUI.loadSettings();
-    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per *6 months* a test.";
-  };
+
 
 }());
