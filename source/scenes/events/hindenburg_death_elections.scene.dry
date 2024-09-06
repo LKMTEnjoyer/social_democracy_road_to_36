@@ -4,7 +4,7 @@ view-if: year = 1934 and month > 10 and hindenburg_election = 1
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
+on-arrival: braun_campaign = 0; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring"
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -13,32 +13,24 @@ set-jump: pres_election
 
 After Hinderburg's death, new elections are being held. [? if spd_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the KPD will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the KPD will run Ernst Thälmann. ?]
 
-# if hitler is deported, who would nsdap run? Duesterberg? or Goering?
-# Goering runs, essentially as a proxy for Hitler, who is now stateless.
+Otto Braun has reluctantly agreed to run for the Presidency. However, there are many members of the SPD from other factions who wish to run. Though they may be less popular, Braun has indicated his willingness to put up the question of the SPD's candidate for a vote. (probably unhistorical, but I want the option of having more members as president)
 
-Many are calling for us to support the incumbent Hindenburg, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Otto Braun to run again, but he is reluctant.
+
+[? if nsdap_votes < 11 : The Nazis have been significantly weakened, and the chance of them winning the presidency is slim. ?]
 
 [? if kpd_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
 
-- @support_hindenburg: Support Hindenburg.
-- @support_braun: Run Otto Braun of the SPD.
+- @other_candidates: Let other members of the SPD run.
+- @support_braun: Support Otto Braun in his bid.
 - @support_thalmann: Support Ernst Thälmann of the KPD.
 
-@support_hindenburg
-subtitle: This is the default option.
-
-Despite his known reactionary nature, Hindenburg has at least been keeping the Nazis at bay. Thus, we must support him.
-
-- @final_election: The final vote...
 
 @support_braun
-subtitle: This will cost us 2 resources.
-choose-if: resources >= 2
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 2; braun_campaign = 1
+
+on-arrival: braun_campaign = 1
 go-to: braun_campaign
 
-It takes effort to run a somewhat unexpected campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
+S First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
 
 The miniscule remnants of the Democratic Party (now called the German State Party) will likely support us. Who else will? Can we convince the Center to support Braun? What about the Communists?
 
