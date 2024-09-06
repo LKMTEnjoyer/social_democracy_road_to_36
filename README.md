@@ -7,4 +7,5 @@
 - Enabled advisors Seydewitz, Hirschfeld, Baade
 - Extended timeline to 1936
 - added content for Hindenburg's death (wip)
-- added achievements section in Library
+- added achievements section in Library (wip)
+- negative militancy/other variables is not bugged anymore
