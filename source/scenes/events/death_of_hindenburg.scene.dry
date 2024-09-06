@@ -2,7 +2,7 @@ title: The Death of Paul von Hindenburg
 view-if: year == 1934 and month >= 7
 frequency: 1000
 max-visits: 1
-on-arrival: hindenburg_dead = 1; president = "Interim Presidency"
+on-arrival: hindenburg_dead = 1; hindenburg_election = 1 if president == "Hindenburg"; president = "Interim Presidency" if president == "Hindenburg"
 tags: event
 
 
