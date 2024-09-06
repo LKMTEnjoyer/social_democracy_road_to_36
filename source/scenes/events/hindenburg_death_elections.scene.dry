@@ -26,10 +26,8 @@ Otto Braun has reluctantly agreed to run for the Presidency. However, there are 
 
 
 @support_braun
-subtitle: This will cost us 2 resources.
-choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 2; braun_campaign = 1
+on-arrival: braun_campaign = 1
 go-to: braun_campaign
 
 Though Braun would rather let another member take over the campaigning, he knows he is the party's best chance at the presidency.
