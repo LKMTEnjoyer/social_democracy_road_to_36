@@ -1,5 +1,5 @@
 title: The Death of Paul von Hindenburg
-view-if: year = 1934 and month >= 7
+view-if: year == 1934 and month >= 7
 frequency: 1000
 max-visits: 1
 tags: event
