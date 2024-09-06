@@ -4,7 +4,7 @@ view-if: year = 1934 and month > 10 and hindenburg_election = 1
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
+on-arrival: braun_campaign = 0; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -16,11 +16,11 @@ After Hinderburg's death, new elections are being held. [? if spd_in_government 
 Otto Braun has reluctantly agreed to run for the Presidency. However, there are many members of the SPD from other factions who wish to run. Though they may be less popular, Braun has indicated his willingness to put up the question of the SPD's candidate for a vote. (probably unhistorical, but I want the option of having more members as president)
 
 
-[? if nsdap_votes < 11 : The Nazis have been significantly weakened, and the chance of them winning the presidency is slim. ?]
+#[? if nsdap_votes < 11 : The Nazis have been significantly weakened, and the chance of them winning the presidency is slim. ?]
 
 [? if kpd_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
 
-- @other_candidates: Let other members of the SPD run.
+#- @other_candidates: Let other members of the SPD run.
 - @support_braun: Support Otto Braun in his bid.
 - @support_thalmann: Support Ernst Thälmann of the KPD.
 
