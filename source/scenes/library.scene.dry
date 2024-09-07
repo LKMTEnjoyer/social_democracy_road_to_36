@@ -383,7 +383,6 @@ if (d3 && window) {
 
 @achievements_lib
 title: Achievements
-tags: endings
 go-to: menu
 on-arrival: {!
 // Achievements:
