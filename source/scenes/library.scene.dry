@@ -449,6 +449,7 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 
 
 = Currently Available Achievements
+
 You currently furfil the requirements for these achievements. However, they require the game to end to achieve them. 
 [? if game_achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
 [? if game_achievement_befreiungstheologie: **Befreiungstheologie** - SPD Catholic support is at least 50%. ?]
