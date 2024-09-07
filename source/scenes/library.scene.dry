@@ -693,7 +693,7 @@ You currently furfil the requirements for these achievements. However, they requ
 
 [? if not achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
 
-[? if not game_achievement_befreiungstheologie: **Befreiungstheologie** - SPD Catholic support is at least 50%. ?]
+[? if not achievement_befreiungstheologie: **Befreiungstheologie** - SPD Catholic support is at least 50%. ?]
 
 [? if not achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
 
