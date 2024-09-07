@@ -385,10 +385,15 @@ if (d3 && window) {
 title: Achievements
 go-to: menu
 on-arrival: {!
-// Achievements:
-// Große Koalition - form a grand coalition
-// Eiserne Front - Form the Iron Front.
-// Roter Zar von Preußen - At the end of the game, Otto Braun is president, chancellor, and minister-president of prussia at the same time.
+Q.roter_zar = 0;
+Q.wirtschaft = 0;
+Q.sohn = 0;
+Q.mittel = 0;
+Q.liberation = 0;
+Q.bauern = 0;
+Q.nationalize = 0;
+Q.polykrise = 0;
+Q.heidelberg = 0;
 if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.spd_prussia) {
     Q.roter_zar = 1;
 }
@@ -451,14 +456,24 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 = Currently Available Achievements
 
 You currently furfil the requirements for these achievements. However, they require the game to end to achieve them. 
-[? if game_achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
-[? if game_achievement_befreiungstheologie: **Befreiungstheologie** - SPD Catholic support is at least 50%. ?]
-[? if game_achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
 
-[? if game_achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
+[? if roter_zar == 1: **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if game_achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
-[? if game_achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if wirtschaft == 1: **Wirtschaftswunder** - In 1933, have unemployment less than 10%, inflation below 5%, and a budget surplus. ?]
+
+[? if sohn == 1: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
+
+[? if mittel == 1: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
+
+[? if liberation == 1: **Befreiungstheologie** - SPD Catholic support is at least 50%. ?]
+
+[? if bauern == 1: **Bauernrevolution** - SPD rural support is at least 50%. ?]
+
+[? if nationalize == 1: **Räterepublik** - begin the transformation to a socialist economy. ?]
+
+[? if polykrise == 1: **Polykrise** - survive a capital strike and a fascist coup. ?]
+
+[? if heidelberg == 1: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
 
 = Completed Achievements in this Playthrough
 
