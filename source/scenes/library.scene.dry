@@ -455,7 +455,7 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 
 = Currently Available Achievements
 
-You currently furfil the requirements for these achievements. However, they require the game to end to achieve them. 
+[? if started == 1: You currently furfil the requirements for these achievements. However, they require the game to end to achieve them. ?]
 
 [? if roter_zar == 1: **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
