@@ -424,6 +424,9 @@ for (var c of Q.classes) {
 if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
     Q.mittel = 1;
 }
+if (Q.catholics_spd_normalized && Q.catholics_spd_normalized >= 50) {
+    Q.liberation = 1;
+}
 if (Q.rural_spd_normalized && Q.rural_spd_normalized >= 50) {
     Q.bauern = 1;
 }
