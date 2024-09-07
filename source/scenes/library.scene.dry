@@ -450,12 +450,16 @@ if (Q.factory_takeovers >= 2) {
 if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_law >= 1 && Q.upper_tax_rates > Q.lower_tax_rates && Q.works_councils > 0 && Q.eu > 0)) {
     Q.heidelberg = 1;
 }
+Q.cur_achieve = 0;
+if ((Q.roter_zar + Q.wirtschaft + Q.sohn + Q.mittel + Q.liberation + Q.bauern + Q.nationalize + Q.polykrise + Q.heidelberg) > 0) {
+Q.cur_achieve = 1;
+}
 !}
 
 
-= Currently Available Achievements
+[? if started == 1: = Currently Available Achievements ?]
 
-[? if started == 1: *You currently furfil the requirements for these achievements. However, they require the game to end to achieve them.* ?]
+[? if started == 1: You currently furfil the requirements for these achievements. However, they require the game to end to achieve them. ?]
 
 [? if roter_zar == 1: **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
