@@ -390,43 +390,21 @@ on-arrival: {!
 // Eiserne Front - Form the Iron Front.
 // Roter Zar von Preußen - At the end of the game, Otto Braun is president, chancellor, and minister-president of prussia at the same time.
 if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.spd_prussia) {
-    this.achieve('red_tzar_of_prussia');
+    Q.roter_zar = 1;
 }
-// Bürgerkrieg - enter a long civil war.
-
-// Einigkeit - survive on easy without a civil war.
-// Einigkeit und Recht - survive on medium without a civil war.
-// Einigkeit und Recht und Freiheit - survive on hard without a civil war.
-
-// Einheitsfront - form a united front with the KPD, and win the civil war.
-
-// Volksfront - form a popular front government, and win the civil war.
-
-// Verfassungskoalition - form a Constitutional Coalition.
-// Wirtschaftspolitik - enact an economic plan.
-// Wirtschaftswunder - reduce unemployment below 10% and have a non-negative budget by 1933.
 if (Q.year >= 1932  && Q.unemployed < 10 && Q.budget > 0 && Q.inflation < 5) {
-    this.achieve('wirtschaftswunder');
+    Q.wirtschaft = 1;
 }
-// Bollwerk der Demokratie - resist the Prussian Coup, and win.
-if (Q.republic_victory && Q.resist_coup) {
-    this.achieve('bollwerk_der_demokratie');
-}
-// Der österreichische Gefreiter - deport hitler
-// Volkspartei - form a people's party
-// Hirschfeld - legalize 2 of homosexual rights and trans rights.
 if (Q.homosexual_rights >= 2) {
     this.achieve('hirschfeld');
 }
-// Mädchen und Uniform - a woman's place is in the Reichsbanner.
-// Gleichheit - Support and enact reforms for women's rights.
+
 if ((Q.womens_work && Q.womens_rights >= 5) || (Q.abortion_rights && Q.womens_rights >= 3)) {
     this.achieve('equality');
 }
 
-// Sohn seiner Klasse - elect Ernst Thälmann as president or chancellor.
 if (Q.chancellor == "Thälmann" || Q.president == "Thälmann") {
-    this.achieve('sohn_seiner_klasse');
+    Q.sohn = 1;
 }
 
 // calculate normalized class voting for the achievements
@@ -443,41 +421,32 @@ for (var c of Q.classes) {
     }
 }
 
-// Die Rote Fahne - join the KPD in the May Day march.
-// Mehrheitspartei - form an SPD majority government in the Reichstag.
-// Panik im Mittelstand - have over 50% of New Middle Class support.
 if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
-    this.achieve('panik_im_mittelstand');
+    Q.mittel = 1;
 }
-// Bauernrevolution - have over 50% rural support.
 if (Q.rural_spd_normalized && Q.rural_spd_normalized >= 50) {
-    this.achieve('bauernrevolution');
+    Q.bauern = 1;
 }
-// Räterepublik - begin the transformation to a socialist economy.
 if (Q.spd_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
-    this.achieve('raterepublik');
+    Q.nationalize = 1;
 }
-// Polykrise - survive both a fascist coup and a capital strike.
 if (Q.march_on_berlin_seen && Q.capital_strike_seen && Q.chancellor != "Hitler" && Q.president != "Hitler" && !Q.total_defeat) {
-    this.achieve("polykrise");
+    Q.polykrise = 1;
 }
-// Wirtschaftsexperiment - implement two different economic plans.
 if ((Q.nationalization_progress >= 1 && Q.wtb_implemented >= 1) || (Q.wtb_implemented >= 1 && Q.moderate_plan_progress >= 1) || (Q.nationalization_progress >= 1 && Q.moderate_plan_progress >= 1)) {
     this.achieve("wirtschaftsexperiment");
 }
-// Syndikalismus - support factory takeovers by workers.
 if (Q.factory_takeovers >= 2) {
     this.achieve("syndikalismus");
 }
-// Stolperstein - lose the civil war against Hitler.
-if ((Q.chancellor_party == "NSDAP" || Q.chancellor == "Hitler" || Q.president == "Hitler") && Q.total_defeat) {
-    this.achieve('stolperstein');
-}
-// Heidelberger Programm - fulfill the goals of the Heidelberg programm - increase welfare, reform justice, support women's rights, progressive taxation, works councils, build a European Union.
 if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_law >= 1 && Q.upper_tax_rates > Q.lower_tax_rates && Q.works_councils > 0 && Q.eu > 0)) {
-    this.achieve('heidelberger_programm');
+    Q.heidelberg = 1;
 }
 !}
+
+
+= Currently Available Achievements
+You currently furfil the requirements for these achievements. However, they require the game to end to achieve them. 
 
 = Completed Achievements in this Playthrough
 
