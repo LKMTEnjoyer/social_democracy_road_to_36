@@ -456,7 +456,6 @@ Q.cur_achieve = 1;
 }
 !}
 
-[+ cur_achieve +]
 = [? if cur_achieve == 1: Currently Available Achievements ?]
 
 [? if cur_achieve == 1: You currently furfill the requirements for these achievements. However, they require the game to end to achieve them. ?]
