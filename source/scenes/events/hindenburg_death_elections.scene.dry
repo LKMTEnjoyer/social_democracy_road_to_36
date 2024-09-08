@@ -116,7 +116,7 @@ We will use the Iron Front to convince the democratic parties to support us for 
 choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
-on-arrival: resources -= 2; workers_spd += 3*(pro_republic); unemployed_spd += 3*(pro_republic); new_middle_spd += 3*(pro_republic);
+on-arrival: resources -= 2; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent);
 go-to: use_iron_front
 
 We will use the Iron Front to try and convince voters that our victory is crucial for the maintainance of a free and democratic Germany.
