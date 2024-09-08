@@ -14,6 +14,7 @@ As an anti-war film, it is the target of major protest by far-right actors, espe
 - @ban: Ban the film, to prevent Nazi violence.
 - @allow: Allow the film to be shown.
 - @allow_protect: Allow the film to be shown, and use the Prussian police to prevent Nazi disruptions.
+- @allow_rb: Allow the film to be shown, and use the local Reichsbanner members to prevent Nazi disruptions.
 - @everyone: In fact, everyone needs to learn the lessons of this film. Give free tickets to students and government employees.
 
 @ban
@@ -35,10 +36,16 @@ on-arrival: nationalism -= 4; pro_republic += 3
 
 Under the protection of the police, the people are allowed to watch the film in peace. Nazi disturbances are kept to a minimum.
 
+@allow_rb
+choose-if: rb_strength*rb_militancy > sa_strength*sa_militancy
+unavailable-subtitle: The Reichsbanner is not strong enough.
+on-arrival: nationalism -= 3; pro_republic += 2
+
+Though the Reichsbanner is not as effective as the Prussian police, most people manage to get to the theater. Nazi disturbances are kept to a minimum.
+
 @everyone
 choose-if: prussian_police_loyalty >= 0.75
 unavailable-subtitle: The police are unable to guarantee the safety of all the attendees.
 on-arrival: nationalism -= 3; pro_republic += 3; workers_nsdap -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 3
 
 Under police protection, crowds throng the film's showings. The reception is mixed, but a new national conversation develops, reexamining the right-wing histories of the war. Quietly, many minds are changed, or at least affected in subtle ways.
-
