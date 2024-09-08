@@ -457,7 +457,7 @@ Q.cur_achieve = 1;
 !}
 
 
-[? if started == 1: = Currently Available Achievements ?]
+= [? if started == 1: Currently Available Achievements ?]
 
 [? if started == 1: You currently furfill the requirements for these achievements. However, they require the game to end to achieve them. ?]
 
