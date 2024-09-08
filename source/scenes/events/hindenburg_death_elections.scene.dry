@@ -4,7 +4,7 @@ view-if: year == 1928 and month >= 1
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; iron_front_formed == 1; spd_candidate = "Braun"; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring"; z_split = 1 if z_relation < 46 and z_party_leader = "Kaas"; z_split = 1 if z_relation < 36 and z_party_leader = "Joos"; 
+on-arrival: braun_campaign = 0; iron_front_formed = 1; spd_candidate = "Braun"; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring"; z_split = 1 if z_relation < 46 and z_party_leader = "Kaas"; z_split = 1 if z_relation < 36 and z_party_leader = "Joos"; 
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
