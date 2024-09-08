@@ -106,13 +106,15 @@ Using the iron front will surely help our chances.
 @if_convince
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
+on-arrival: resources -= 2; if_dem_rally += 1;
 go-to: use_iron_front
 
-We will use the Iron Front to convince the democratic parties to support us for the presidency.
+We will use the Iron Front to convince the democratic parties to support us for the presidency. This will improve our chances when negotiating with Zentrum and the DDP.
 
 @if_votes
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
+on-arrival: resources -= 2; workers_spd += 3*(pro_republic); unemployed_spd += 3*(1-dissent); new_middle_spd += 3*(1-pro_republic) 
 go-to: use_iron_front
 
 We will use the Iron Front to try and convince voters that our victory is crucial for the maintainance of a free and democratic Germany.
@@ -120,6 +122,7 @@ We will use the Iron Front to try and convince voters that our victory is crucia
 @if_fight
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
+on-arrival: resources -= 2; if_fascists_fought += 1;
 go-to: use_iron_front
 
 We will use the Iron Front to fight against the SA and Stahlhelm, who are attempting to intimidate voters with threats of violence.
