@@ -98,7 +98,7 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 @use_iron_front
 choose-if: iron_front_formed == 1
 unavailable-subtitle: The Iron Front hasn't been formed yet.
-go-to: if-choose
+go-to: if_choose
 
 Using the iron front will surely help our chances.
 
