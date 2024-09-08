@@ -127,6 +127,8 @@ We will use the Iron Front to fight against the SA and Stahlhelm, who are attemp
 @if_done
 go-to: braun_campaign
 
+We don't need to use the Iron Front any further.
+
 @convince_z
 choose-if: spd_votes >= z_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
