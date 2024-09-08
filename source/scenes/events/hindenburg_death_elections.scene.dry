@@ -4,7 +4,7 @@ view-if: year == 1928 and month >= 1
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; spd_candidate = "Braun"; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
+on-arrival: braun_campaign = 0; spd_candidate = "Braun"; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring"; z_split = 1 if z_relation < 46 and z_party_leader = "Kaas"; z_split = 1 if z_relation < 36 and z_party_leader = "Joos"; 
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -15,7 +15,17 @@ After Hinderburg's death, new elections are being held. [? if spd_in_government 
 
 Otto Braun has reluctantly agreed to run for the Presidency. However, there are many members of the SPD from other factions who wish to run. Though they may be less popular, Braun has indicated his willingness to put up the question of the SPD's candidate for a vote. (probably unhistorical, but I want the option of having more members as president)
 
-[? if z_relation < 31 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
+Hitler has vowed to win the the presidency at any cost necessary. It is expected that the SA and the Stahlhelm will attack polling stations and try to scare off our members. We cannot let them blatantly intimidate voters like this, and we must rally the Iron Front to stop them.
+
+[? if z_split == 1 : Because of our low relations with Zentrum, they have decided to run their own candidate for the time being. ?]
+
+[? if z_party_leader = "Joos" and z_split == 1 : However, Joos is more amenable to cooperating with the SPD, and it will be easier to sway him to our cause. ?]
+
+[? if z_party_leader = "Kaas" and z_split == 1 : Of course, it can't be said that it was unexpected that Kaas would have ran on his own. Kaas, a representative of the right wing of Zentrum, will be much harder to convince. ?]
+
+[? if ddp_relation < 31 and z_split == 1: Somehow, we have managed to sink our relations with the DDP, whether by being too friendly with the KPD or going against their policies constantly. They are expected to support Zentrum for the presidential elections. There is still a chance to convince them, however.?]
+
+[? if dvp_relation < 51 and z_split == 1: The DVP is not expected to support us in the upcoming elections. After Stresemann's unfortunate death, they have drifted away from us. They are expected to support Zentrum for the presidential elections. Convincing them to support us will be significantly harder. ?]
 
 [? if kpd_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
 
@@ -76,10 +86,40 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 
 @braun_campaign
 
+- @use_iron_front: Use the Iron Front to campaign.
 - @convince_z: Convince the Center Party.
 - @convince_kpd: Convince the Communists.
 - @convince_liberals: Convince the remaining liberals, wherever they are.
 - @final_election: The final vote...
+
+@use_iron_front
+choose-if: iron_front_formed == 1
+
+- @if_convince: Use the Iron Front to try and sway the democratic parties to support us.
+- @if_votes: Use the Iron Front to rally voters to our cause.
+- @if_fight: Use the Iron Front to protect against political violence.
+- @braun_campaign
+
+@if_convince
+subtitle: -2 resources
+unavailable-subtitle: Not enough resources (need 2)
+go-to: use_iron_front
+
+We will use the Iron Front to convince the democratic parties to support us for the presidency.
+
+@if_votes
+subtitle: -2 resources
+unavailable-subtitle: Not enough resources (need 2)
+go-to: use_iron_front
+
+We will use the Iron Front to try and convince voters that our victory is crucial for the maintainance of a free and democratic Germany.
+
+@if_fight
+subtitle: -2 resources
+unavailable-subtitle: Not enough resources (need 2)
+go-to: use_iron_front
+
+We will use the Iron Front to fight against the SA and Stahlhelm, who are attempting to intimidate voters with threats of violence.
 
 @convince_z
 choose-if: spd_votes >= z_votes
