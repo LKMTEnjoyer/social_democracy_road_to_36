@@ -101,7 +101,7 @@ Using the iron front will surely help our chances.
 - @if_convince: Use the Iron Front to try and sway the democratic parties to support us.
 - @if_votes: Use the Iron Front to rally voters to our cause.
 - @if_fight: Use the Iron Front to protect against political violence.
-- @if_done: We don't need to use the Iron Front at this moment.
+- @braun_campaign: We don't need to use the Iron Front at this moment.
 
 @if_convince
 subtitle: -2 resources
@@ -126,11 +126,6 @@ on-arrival: resources -= 2; if_fascists_fought += 1;
 go-to: use_iron_front
 
 We will use the Iron Front to fight against the SA and Stahlhelm, who are attempting to intimidate voters with threats of violence.
-
-@if_done
-go-to: braun_campaign
-
-We don't need to use the Iron Front any further.
 
 @convince_z
 choose-if: spd_votes >= z_votes
