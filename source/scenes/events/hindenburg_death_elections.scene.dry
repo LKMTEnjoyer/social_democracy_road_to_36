@@ -95,8 +95,11 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 @use_iron_front
 choose-if: iron_front_formed == 1
 unavailable-subtitle: The Iron Front hasn't been formed yet.
+go-to: if-choose
 
 Using the iron front will surely help our chances.
+
+@if_choose
 
 - @if_convince: Use the Iron Front to try and sway the democratic parties to support us.
 - @if_votes: Use the Iron Front to rally voters to our cause.
@@ -108,7 +111,7 @@ choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
 on-arrival: resources -= 2; if_dem_rally += 1;
-go-to: use_iron_front
+go-to: if_choose
 
 We will use the Iron Front to convince the democratic parties to support us for the presidency. This will improve our chances when negotiating with Zentrum and the DDP.
 
@@ -117,7 +120,7 @@ choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
 on-arrival: resources -= 2; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent);
-go-to: use_iron_front
+go-to: if_choose
 
 We will buse the Iron Front to try and convince voters that our victory is crucial for the maintainance of a free and democratic Germany.
 
@@ -126,7 +129,7 @@ choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
 on-arrival: resources -= 2; if_fascists_fought += 1;
-go-to: use_iron_front
+go-to: if_choose
 
 We will use the Iron Front to fight against the SA and Stahlhelm, who are attempting to intimidate voters with threats of violence.
 
