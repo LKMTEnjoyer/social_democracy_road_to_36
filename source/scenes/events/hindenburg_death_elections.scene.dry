@@ -43,19 +43,22 @@ Braun decides to put the question of who to run for the presidency to an interna
 
 @seydewitz
 on-arrival: braun_campaign = 1; spd_candidate = "Seydewitz"; left_strength += 15; workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent); workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; old_middle_spd -= 3; new_middle_spd -= 2;
-go-to: braun_campaign
+go-to: election_algorithm
+set-jump: braun_campaign
 
 Seydewitz's campaign will increase our popularity with the radical workers and the unemployed, but his candidacy might throw off some undecided middle-class voters, who are wary of his leftist tendencies.
 
 @mierendorff
 on-arrival: braun_campaign = 1; spd_candidate = "Mierendorff"; neorevisionist_strength += 20; z_relation += 4; ddp_relation += 5; dvp_relation += 3; workers_spd += 2*(1-dissent); rural_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent);
-go-to: braun_campaign
+go-to: election_algorithm
+set-jump: braun_campaign
 
 Mierendorff will rally the Iron Front to vote for his candidacy, which will improve relations with the other democratic parties and gain support from all sectors of society.
 
 @ollenhauer
 on-arrival: braun_campaign = 1; spd_candidate = "Ollenhauer"; reformist_strength += 15; z_relation += 8; ddp_relation += 10; dvp_relation += 6; 
-go-to: braun_campaign
+go-to: election_algorithm
+set-jump: braun_campaign
 
 Ollenhauer, though he is relatively inexperienced, can use his diplomatic skill to convince Zentrum and the liberal parties to support his bid for the presidency.
 
